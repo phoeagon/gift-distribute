@@ -14,7 +14,7 @@ under certain conditions. Check "gpl.txt" for details.
 	print_title_in_page($system_title);
 	
 	echo "<hr/>";
-	echo "<center><a href=admin.php?op=viewrecord>View Records</a>&nbsp&nbsp&nbsp&nbsp&nbsp\n";
+	echo "<center><a href=admin.php?op=viewrecord>View Records</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;\n";
 	echo "<a href=admin.php?op=logout>Logout</a></center>\n";
 	show_admin_quota($quota,$allcnt,$accnt);
 	//echo "";
@@ -28,7 +28,7 @@ under certain conditions. Check "gpl.txt" for details.
 				$row['val']='';
 			echo $row['descr']."<input type=text name=".$row['opt']." value='".$row['val']."' />"."<br/>\n";
 		}
-		echo "<input type=submit value='Configure!' />&nbsp&nbsp\n";
+		echo "<input type=submit value='Configure!' />&nbsp;&nbsp;\n";
 		echo "<input type='reset' value='Reset' />\n";
 		echo "</form>\n";
 	
@@ -45,7 +45,7 @@ under certain conditions. Check "gpl.txt" for details.
 		while ($row = mysql_fetch_array($result)){
 			echo $row['opt']."<br/><textarea name=".$row['opt']." cols=40 rows=10>".$row['val']."</textarea><br/>\n";
 		}
-		echo "<input type=submit value='Configure!' />&nbsp&nbsp\n";
+		echo "<input type=submit value='Configure!' />&nbsp;&nbsp;\n";
 		echo "<input type='reset' value='Reset' />\n";
 		echo "</form>\n";
 		echo "<br/><br/><br/>";

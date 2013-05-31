@@ -17,7 +17,7 @@ This php program is released with educational purposes. And I do hope that it ca
 
 Extract the cab into your public_html directory as you set in your server.
 
-Set your database name, user, password in config.php.
+Set your database **name**, **user**, **password** in `config.php`.
 
 Go to in browser `index.php&op=install` and set your admin password.
 

@@ -52,7 +52,7 @@ under certain conditions. Check "gpl.txt" for details.
 		echo "<hr/>";
 		echo "<center><p><b><big>Control Pannel</big></b></p>\n";
 		echo "<form action=admin.php?op=auth method=POST>\n";
-		echo "Admin Password:&nbsp <input type=password name=pass /><br/>";
+		echo "Admin Password:&nbsp; <input type=password name=pass /><br/>";
 		echo "<input type=submit value=Log-in /><br/><br/></center>";
 		echo "<p><center><a href=index.php>Homepage</a></center></p>";
 		print_footer($copr);

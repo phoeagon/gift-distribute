@@ -31,10 +31,10 @@ under certain conditions. Check "gpl.txt" for details.
 			$result = mysql_query($sql."stt='pending' ORDER BY subtime");
 		
 		
-		echo "<a href='index.php?op=showrecord&status=0'>Default List</a>&nbsp&nbsp&nbsp&nbsp&nbsp";
-		echo "<a href='index.php?op=showrecord&status=1'>Accepted/Sent Queries Only</a>&nbsp&nbsp&nbsp&nbsp&nbsp";
-		echo "<a href='index.php?op=showrecord&status=3'>Pending Queries Only</a>&nbsp&nbsp&nbsp&nbsp&nbsp";
-		echo "<a href='index.php?op=showrecord&status=2'>Rejected/Revoked Queries Only</a>&nbsp&nbsp&nbsp&nbsp&nbsp";
+		echo "<a href='index.php?op=showrecord&status=0'>Default List</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+		echo "<a href='index.php?op=showrecord&status=1'>Accepted/Sent Queries Only</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+		echo "<a href='index.php?op=showrecord&status=3'>Pending Queries Only</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+		echo "<a href='index.php?op=showrecord&status=2'>Rejected/Revoked Queries Only</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 		echo "<br/><br/>\n";
 		
 		echo "--------Records:-------<br/>";

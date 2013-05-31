@@ -17,7 +17,7 @@ under certain conditions. Check "gpl.txt" for details.
 		if ($_POST['condition']!=NULL){
 			$cond = stripslashes(urldecode($_POST['condition']));
 			//this is not SQL safe but it's in a admin page.
-			echo "<p>Customized Filter: &nbsp ".$sql.$cond."</p>";
+			echo "<p>Customized Filter: &nbsp; ".$sql.$cond."</p>";
 			$result = mysql_query($sql.$cond);
 		}
 		else if ($_GET['status']=='0')
@@ -32,17 +32,17 @@ under certain conditions. Check "gpl.txt" for details.
 			$result = mysql_query($sql."stt='pending' or stt='accepted' or stt='sent' ORDER BY subtime");
 		
 		
-		echo "<a href='admin.php?op=viewrecord&status=0'>All Queries</a>&nbsp&nbsp&nbsp&nbsp&nbsp";
-		echo "<a href='admin.php?op=viewrecord&status=4'>Default List</a>&nbsp&nbsp&nbsp&nbsp&nbsp";
-		echo "<a href='admin.php?op=viewrecord&status=1'>Accepted/Sent Queries Only</a>&nbsp&nbsp&nbsp&nbsp&nbsp";
-		echo "<a href='admin.php?op=viewrecord&status=3'>Pending Queries Only</a>&nbsp&nbsp&nbsp&nbsp&nbsp";
-		echo "<a href='admin.php?op=viewrecord&status=2'>Rejected/Revoked Queries Only</a>&nbsp&nbsp&nbsp&nbsp&nbsp";
+		echo "<a href='admin.php?op=viewrecord&status=0'>All Queries</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+		echo "<a href='admin.php?op=viewrecord&status=4'>Default List</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+		echo "<a href='admin.php?op=viewrecord&status=1'>Accepted/Sent Queries Only</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+		echo "<a href='admin.php?op=viewrecord&status=3'>Pending Queries Only</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
+		echo "<a href='admin.php?op=viewrecord&status=2'>Rejected/Revoked Queries Only</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 		echo "<br/><br/>\n";
 		
 		echo "<form action=admin.php?op=viewrecord method=POST>\n" ;
 		echo "Advanced Filter:\n";
-		echo "<input type=text size=50 name=condition />&nbsp&nbsp&nbsp";
-		echo "<input type=submit value=Filter>&nbsp";
+		echo "<input type=text size=50 name=condition />&nbsp;&nbsp;&nbsp;";
+		echo "<input type=submit value=Filter>&nbsp;";
 		echo "<input type=reset value=reset></form>";
 		
 		echo "<small><small>(rcv,pcode,stt,address,note,nick,email,passw,subtime)</small></small>";
@@ -75,10 +75,10 @@ under certain conditions. Check "gpl.txt" for details.
 					<th><small>".date("M d (H:i)",$row['subtime'])."</small></th>
 					<th>".urldecode($row['stt'])."</th>".
 					"<th><a href=admin.php?op=editrecord&email=".$row['email'].">Edit</a>".
-					"&nbsp&nbsp<a href=admin.php?op=quickstt&stt=accepted&email=".$row['email'].">a</a>".
-					"&nbsp<a href=admin.php?op=quickstt&stt=sent&email=".$row['email'].">s</a>".
-					"&nbsp<a href=admin.php?op=quickstt&stt=rejected&email=".$row['email'].">r</a>".
-					"&nbsp<a href=admin.php?op=quickstt&stt=pending&email=".$row['email'].">p</a>"
+					"&nbsp;&nbsp;<a href=admin.php?op=quickstt&stt=accepted&email=".$row['email'].">a</a>".
+					"&nbsp;<a href=admin.php?op=quickstt&stt=sent&email=".$row['email'].">s</a>".
+					"&nbsp;<a href=admin.php?op=quickstt&stt=rejected&email=".$row['email'].">r</a>".
+					"&nbsp;<a href=admin.php?op=quickstt&stt=pending&email=".$row['email'].">p</a>"
 					."</th>".
 					"</tr><tr>";
 				}
@@ -91,18 +91,18 @@ under certain conditions. Check "gpl.txt" for details.
 		echo "<hr/>";
 		echo "<p>Commands here are executed for all records, not just those above.</p>";
 		echo "<a href=admin.php?op=cleantrash>!~!Delete Trash Records!~!</a>";
-		echo "&nbsp&nbsp&nbsp&nbsp&nbsp";
+		echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 		echo "<a href=admin.php?op=acceptall>Accept all Pending</a>";
-		echo "&nbsp&nbsp&nbsp&nbsp&nbsp";
+		echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 		echo "<a href=admin.php?op=rejectall>Reject all Pending</a>";
-		echo "&nbsp&nbsp&nbsp&nbsp&nbsp";
+		echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 		echo "<a href=admin.php?op=sendall>Send all Accepted</a>";
-		echo "&nbsp&nbsp&nbsp&nbsp&nbsp";
+		echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 		echo "<a href=admin.php?op=markreject>Mark all as Rejected</a>";
-		echo "&nbsp&nbsp&nbsp&nbsp&nbsp";
+		echo "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;";
 		
 		
-		echo "\n<br/><br/><a href=admin.php>Control Pannel</a> &nbsp&nbsp"
+		echo "\n<br/><br/><a href=admin.php>Control Pannel</a> &nbsp;&nbsp;"
 			."<a href=admin.php?op=phpinfo>PHP info</a>";
 		echo "</center>";
 		echo "<br/><br/>";
